@@ -1,7 +1,14 @@
+<!-- <p>{{.}}</p> -->
+{{ $taxo := .Site.Taxonomies.tags }}
+{{ $taxostr := "/tags/" }}
+{{ if or (eq .Section "projects") (hasPrefix .URL "/projtags") }}
+  {{ $taxo = .Site.Taxonomies.projTags }}
+  {{ $taxostr = "/projtags/" }}
+{{ end }}
 <ul class="tags__list">
-  {{ range $tag, $value := $.Site.Taxonomies.tags }}
+  {{ range $tag, $value := $taxo }}
   <li class="tag__item">
-    <a class="tag__link" href="{{ "/tags/" | relLangURL}}{{ $tag | urlize }}">{{ $tag | urlize }} ({{ len $value }})</a>
+    <a class="tag__link" href="{{ $taxostr | relLangURL}}{{ $tag | urlize }}">{{ $tag | urlize }} ({{ len $value }})</a>
   </li>
   {{ end }}  
 </ul>

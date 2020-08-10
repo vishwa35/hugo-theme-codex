@@ -1,4 +1,7 @@
 {{ $taxo := "tags" }}
+{{ if eq .Section "projects" }}
+  {{ $taxo = "projTags" }}
+{{ end }}
 {{ with .Param $taxo }}
 <ul class="tags__list">
     {{ range $index, $tag := . }}
