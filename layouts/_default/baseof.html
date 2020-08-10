@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="/js/dark-mode.js"></script>
 <html lang="{{ .Site.LanguageCode }}" class="lightTheme" id="theme">
 
 <head>
@@ -60,7 +61,6 @@
 
   {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity | safeHTMLAttr }}" crossorigin="anonymous"></script>
-  <script src="/js/dark-mode.js"></script>
   {{ block "scripts" . }} {{ end }}
 </body>
 
