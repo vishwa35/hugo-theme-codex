@@ -1,4 +1,10 @@
-window.onload = function () {
+if (document.readyState === 'complete') {
+    onReady();
+} else {
+    document.addEventListener("DOMContentLoaded", onReady);
+}
+
+function onReady() {
     var toggle = document.getElementById("dark-mode-toggle");
     var theme = document.getElementById("theme");
     
@@ -31,4 +37,5 @@ window.onload = function () {
         }
         localStorage.setItem("dark-mode-storage", mode);
     }
+
 }
