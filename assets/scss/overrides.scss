@@ -9,4 +9,27 @@
 //   ),
 // );
 
-
+$themes: (
+  lightTheme: (
+    text: #111,
+    low-neutral: #BEBEBE,
+    neutral-table-border: #eeeeee,
+    neutral: #9b9b9b,
+    high-neutral: #717171,
+    bg: #f0f0f0,
+    accent: #107985,
+    accent-text: #246269,
+    accent-bg: #06ADBF,
+  ),
+  darkTheme: (
+    text: #f0f0f0,
+    low-neutral: #717171,
+    neutral-table-border: #eeeeee,
+    neutral: #9b9b9b,
+    high-neutral: #BEBEBE,
+    bg: #111,
+    accent: #107985,
+    accent-text: #06ADBF,
+    accent-bg: #246269,
+  ),
+);
