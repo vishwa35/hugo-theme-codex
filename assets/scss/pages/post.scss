@@ -15,7 +15,7 @@ $tocBreakpoint: 1024px;
 
 .post {
   width: 100%;
-  max-width: 34rem;
+  max-width: 42rem;
   margin: 0 auto;
 
   h2,
@@ -248,9 +248,6 @@ footer {
   a[href] {
     @include theme() {
       color: theme-get('accent-text');
-      &:visited {
-        color: theme-get('accent-bg')
-      }
     }
   }
 }
