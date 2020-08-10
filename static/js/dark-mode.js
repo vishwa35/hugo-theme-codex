@@ -1,12 +1,16 @@
 window.onload = function () {
     var toggle = document.getElementById("dark-mode-toggle");
     var theme = document.getElementById("theme");
-    var hr = (new Date()).getHours();
-
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches || (hr < 7 || hr > 18)) {
-        setTheme(localStorage.getItem("dark-mode-storage") || "dark");
+    
+    if (!localStorage.getItem("dark-mode-storage")) {
+        var hr = (new Date()).getHours();
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches || (hr < 7 || hr > 18)) {
+            setTheme(localStorage.getItem("dark-mode-storage") || "dark");
+        } else {
+            setTheme(localStorage.getItem("dark-mode-storage") || "light");
+        }
     } else {
-        setTheme(localStorage.getItem("dark-mode-storage") || "light");
+        setTheme(localStorage.getItem("dark-mode-storage"))
     }
 
     toggle.addEventListener("click", () => {
