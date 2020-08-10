@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="language" content="en">
   <meta name="description" content="{{ if .IsHome}}{{ .Site.Params.Description }}{{ else }}{{.Page.Params.Description}}{{ end }}">
-  <meta name="keywords" content="{{ delimit .Keywords " , " }}">
+  <meta name="keywords" content="{{ delimit (append .Site.Params.keywords .Keywords) " , " }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
