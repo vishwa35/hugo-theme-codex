@@ -1,6 +1,6 @@
 @import "burger";
 
-.nav {
+.myNav {
   font-size: 16px;
   position: fixed;
   display: flex;
@@ -19,7 +19,7 @@
   }
 }
 
-.nav--active .nav {
+.nav--active .myNav {
   visibility: visible;
   height: 100%;
   width: 100%;

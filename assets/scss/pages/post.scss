@@ -105,12 +105,16 @@ $tocBreakpoint: 1024px;
 
   a {
     text-decoration: none;
-    color: #9b9b9b;
+    @include theme() {
+      color: theme-get('neutral')
+    }
     font-size: 0.9rem;
   }
 
   a.active {
-    color: rgb(51, 51, 51);
+    @include theme() {
+      color: theme-get('text')
+    }
   }
 }
 
@@ -137,7 +141,7 @@ $tocBreakpoint: 1024px;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   @include theme() {
-    background: lighten(theme-get('accent'), 41%);;
+    background: neutralize(theme-get('bg'), 5%);;
   }
   @include theme() {
     color: theme-get('accent');
@@ -146,7 +150,7 @@ $tocBreakpoint: 1024px;
 
   &:hover {
     @include theme() {
-      background: lighten(theme-get('accent'), 38%);
+      background: neutralize(theme-get('bg'), 10%);
     }
   }
 }

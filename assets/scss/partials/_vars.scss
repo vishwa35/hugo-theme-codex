@@ -21,9 +21,26 @@ $large: 1400px;
   @return map-get($theme-map, $key);
 }
 
+@function neutralize($color, $amt) {
+  @if theme-get('theme') == 'light' {
+    @return lighten($color, $amt);
+  } @else {
+    @return darken($color, $amt);
+  }
+}
+
+@function extremify($color, $amt) {
+  @if theme-get('theme') == 'light' {
+    @return darken($color, $amt);
+  } @else {
+    @return lighten($color, $amt);
+  }
+}
+
 // colors
 $themes: (
   lightTheme: (
+    theme: 'light',
     text: #111,
     low-neutral: #f7f7f7,
     neutral-table-border: #eeeeee,
@@ -32,9 +49,9 @@ $themes: (
     bg: #fff,
     accent: #9013FE,
     accent-text: #580E99,
-    accent-bg: #A56AD9,
   ),
   darkTheme: (
+    theme: 'dark',
     text: #fff,
     low-neutral: #717171,
     neutral-table-border: #eeeeee,
@@ -43,7 +60,6 @@ $themes: (
     bg: #111,
     accent: #9013FE,
     accent-text: #A56AD9,
-    accent-bg: #580E99,
   ),
 );
 
