@@ -141,7 +141,7 @@ $tocBreakpoint: 1024px;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   @include theme() {
-    background: neutralize(theme-get('bg'), 5%);;
+    background: extremify(theme-get('bg'), 5%);;
   }
   @include theme() {
     color: theme-get('accent');
@@ -150,7 +150,7 @@ $tocBreakpoint: 1024px;
 
   &:hover {
     @include theme() {
-      background: neutralize(theme-get('bg'), 10%);
+      background: extremify(theme-get('bg'), 10%);
     }
   }
 }

@@ -11,6 +11,7 @@
 
 $themes: (
   lightTheme: (
+    theme: 'light',
     text: #0d1319,
     high-neutral: #57606B,
     neutral-table-border: #DEE2E6,
@@ -22,6 +23,7 @@ $themes: (
     accent: #3c8bdb,
   ),
   darkTheme: (
+    theme: 'dark',
     text: #e7eaed,
     high-neutral: #DEE2E6,
     neutral-table-border: #DEE2E6,
