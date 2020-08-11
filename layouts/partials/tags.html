@@ -1,6 +1,6 @@
 {{ $taxo := "tags" }}
-{{ if eq .Section "projects" }}
-  {{ $taxo = "projTags" }}
+{{ if eq .Section "portfolio" }}
+  {{ $taxo = "projtags" }}
 {{ end }}
 {{ with .Param $taxo }}
 <ul class="tags__list">

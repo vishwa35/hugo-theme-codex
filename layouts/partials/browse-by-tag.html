@@ -1,7 +1,7 @@
 {{ $taxo := .Site.Taxonomies.tags }}
 {{ $taxostr := "/tags/" }}
-{{ if or (eq .Section "projects") (hasPrefix .URL "/projtags") }}
-  {{ $taxo = .Site.Taxonomies.projTags }}
+{{ if or (eq .Section "portfolio") (hasPrefix .RelPermalink "/projtags") }}
+  {{ $taxo = .Site.Taxonomies.projtags }}
   {{ $taxostr = "/projtags/" }}
 {{ end }}
 <ul class="tags__list">

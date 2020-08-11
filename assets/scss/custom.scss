@@ -24,7 +24,7 @@ hr {
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   @include theme() {
-    background-color: extremify(theme-get('bg'), 5%);
+    background-color: neutralize(theme-get('bg'), 7%);
     border-color: theme-get('neutral-table-border');
     border-bottom-color: rgb(255, 255, 255);
   }

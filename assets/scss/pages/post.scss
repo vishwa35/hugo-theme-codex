@@ -83,6 +83,7 @@ $tocBreakpoint: 1024px;
   position: sticky;
   align-self: start;
   top: 3rem;
+  right: 3rem;
   max-width: 350px;
 
   @media screen and (max-width: $tocBreakpoint) {
@@ -141,7 +142,7 @@ $tocBreakpoint: 1024px;
   padding: 0.2em 0.4em;
   border-radius: 3px;
   @include theme() {
-    background: extremify(theme-get('bg'), 5%);;
+    background: neutralize(theme-get('bg'), 5%);;
   }
   @include theme() {
     color: theme-get('accent');
@@ -150,7 +151,7 @@ $tocBreakpoint: 1024px;
 
   &:hover {
     @include theme() {
-      background: extremify(theme-get('bg'), 10%);
+      background: neutralize(theme-get('bg'), 10%);
     }
   }
 }
@@ -194,7 +195,9 @@ $tocBreakpoint: 1024px;
       margin-top: 0;
     }
     &:hover {
-      background-color: #f6f9fc;
+      @include theme() {
+        background-color: neutralize(theme-get('bg'), 5);
+      }
     }
   }
 }
