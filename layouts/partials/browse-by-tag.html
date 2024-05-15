@@ -8,8 +8,8 @@
   {{ range $tag, $value := $taxo }}
     {{ if gt $value 1 }}
       <li class="tag__item">
-        <a class="tag__link" href="{{ $taxostr | relLangURL}}{{ $tag | urlize }}">{{ $tag | urlize }} ({{ len $value }})</a>
+        <a class="tag__link" href="{{ $taxostr | relLangURL}}{{ $tag | urlize }}">{{ $tag }} ({{ len $value }})</a>
       </li>
     {{ end }}
-  {{ end }}  
+  {{ end }}
 </ul>

@@ -1,13 +1,17 @@
 {{ $currentPage := . }}
-{{ $icons := .Site.Params.iconOrder | default (slice "Twitter" "GitHub" "Email" "Facebook" "GitLab" "Instagram" "LinkedIn" "YouTube") }}
+{{ $icons := .Site.Params.iconOrder | default (slice "Twitter" "GitHub" "Email" "Mastodon" "Facebook" "GitLab" "Instagram" "LinkedIn" "YouTube") }}
 
 <div class="social-icons">
   {{ range $icons }}
     {{ $icon := anchorize . }} 
     {{ if isset $currentPage.Site.Params $icon }}
-      <a class="social-icons__link" title="{{ . }}"
-         href="{{ index $currentPage.Site.Params $icon }}"
-         target="_blank" rel="noopener">
+      <a
+        class="social-icons__link"
+        title="{{ . }}"
+        href="{{ index $currentPage.Site.Params $icon }}"
+        target="_blank"
+        rel="me noopener"
+      >
         {{ if eq $icon "email" }}
           <i class="social-icons__icon fas fa-envelope fa-lg"></i>
         {{ else }}
