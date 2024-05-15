@@ -7,6 +7,7 @@ $burgerContainerHeight: 4rem;
 $medium: 800px;
 $large: 1400px;
 
+$theme-map: null;
 @mixin theme() {
   @each $theme, $map in $themes {
     $theme-map: $map !global;
@@ -14,7 +15,7 @@ $large: 1400px;
       @content;
     }
   }
-  $theme-map: null !global;
+  $theme-map: null;
 }
 
 @function theme-get($key) {
