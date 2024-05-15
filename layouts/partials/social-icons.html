@@ -14,6 +14,8 @@
       >
         {{ if eq $icon "email" }}
           <i class="social-icons__icon fas fa-envelope fa-lg"></i>
+        {{ else if eq $icon "substack" }}
+          <i class="social-icons__icon fas fa-newspaper fa-lg"></i>
         {{ else }}
           <i class="social-icons__icon fab fa-{{$icon}} fa-lg"></i>
         {{ end }}
